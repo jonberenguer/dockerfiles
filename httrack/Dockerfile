@@ -1,6 +1,5 @@
 FROM ubuntu:latest
-
-LABEL 
+LABEL maintainer="jberenguer <berenguer.jon@gmail.com>"
 
 RUN apt update &&     apt-get install -y httrack
 
