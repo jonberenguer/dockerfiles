@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: etherpadlite
+
+  web:
+    image: tvelocity/etherpad-lite
+    restart: always
+    environment:
+      ETHERPAD_DB_HOST: db
+      ETHERPAD_DB_PASSWORD: etherpadlite
+    ports:
+      - 9001:9001
