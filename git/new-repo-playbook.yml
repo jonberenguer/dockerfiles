@@ -1,0 +1,20 @@
+---
+- hosts: private-git
+  vars:
+    new_repo : test
+  remote_user: git
+  tasks:
+  - name: new repo directory
+    file:
+      path: /gitrepo/{{ new_repo }}.git
+      state: directory
+  - name: go to new repo and init
+    command:
+      cmd: git init --bare
+      chdir: /gitrepo/{{ new_repo }}.git
+  - name: print to stdout
+    command:
+      cmd: ls
+      chdir: /gitrepo
+    register: ls_stdout
+  - debug: msg="{{ ls_stdout.stdout }}"

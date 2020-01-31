@@ -1,0 +1,11 @@
+alpine
+archlinux
+archlinux/base
+centos
+ubuntu
+debian
+mariadb
+redis
+mongo
+python
+microsoft/powershell
