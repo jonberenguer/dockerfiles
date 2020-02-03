@@ -13,7 +13,7 @@ if [ -d "${DOCKERDIR}"/${IMGNAME} ] ; then
  docker rmi $IMAGE
  cd "$DOCKERDIR"/$IMGNAME
  pwd
- sudo docker build -t $IMAGE .
+ docker build -t $IMAGE .
  echo Completed!
 else
  echo "Image directory doesn't exist."
