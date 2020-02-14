@@ -26,3 +26,9 @@ int main() {
 
     return(0);
 }
+
+
+# additional args
+--shm-size=2g 
+
+

@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN apt update && \
@@ -16,6 +16,7 @@ RUN  pip install --upgrade youtube-dl
 RUN useradd -s /bin/bash youtube-dl -m -d /home/youtube-dl
 
 COPY --chown=1000:1000 get-audio.sh /home/youtube-dl/
+COPY --chown=1000:1000 get-video.sh /home/youtube-dl/
 
 WORKDIR /home/youtube-dl
 USER youtube-dl
