@@ -16,5 +16,4 @@ RUN adduser --home /home/p7zip \
 WORKDIR /home/p7zip
 USER p7zip
 
-
-CMD ["7z", "--help"]
+ENTRYPOINT ["/usr/bin/7z"]
