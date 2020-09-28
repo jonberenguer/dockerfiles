@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM archlinux/base:latest
 
 RUN pacman -Sy --noconfirm newsboat
 

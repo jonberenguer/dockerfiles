@@ -1,0 +1,28 @@
+
+###
+# in .arduinoX/preference.txt
+# editor.window.height.default=1280
+# editor.window.width.default=1280
+###
+
+xhost +local:root
+
+bspc rule -a processing-app-Base rectangle=1280x1280+640+100 state=floating
+
+    docker run \
+        -it \
+        --rm \
+        --network=host \
+        --privileged \
+        -e DISPLAY=unix$DISPLAY \
+        -e XAUTHORITY=/tmp/.docker.xauth \
+        -v /tmp/.docker.xauth:/tmp/.docker.xauth:rw \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        -v /dev/ttyUSB0:/dev/ttyUSB0 \
+        -v ~/B03120/container/home/arduino:/home/developer \
+        user/arduino:latest arduino
+        #user/dtest /bin/bash
+
+bspc rule -r processing-app-Base rectangle=1280x1280+640+100 state=floating
+
+xhost -local:root

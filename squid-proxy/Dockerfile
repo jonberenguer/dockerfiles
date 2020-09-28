@@ -1,6 +1,5 @@
-FROM alpine
+FROM alpine:latest
 
-MAINTAINER chrisdaish@gmail.com
 
 RUN apk update \
     && apk add squid \
