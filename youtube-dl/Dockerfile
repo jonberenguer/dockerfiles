@@ -17,6 +17,7 @@ RUN useradd -s /bin/bash youtube-dl -m -d /home/youtube-dl
 
 COPY --chown=1000:1000 get-audio.sh /home/youtube-dl/
 COPY --chown=1000:1000 get-video.sh /home/youtube-dl/
+COPY --chown=1000:1000 get-batch.sh /home/youtube-dl/
 
 WORKDIR /home/youtube-dl
 USER youtube-dl
