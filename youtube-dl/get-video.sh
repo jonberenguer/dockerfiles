@@ -15,3 +15,7 @@ OUTPUT=$(youtube-dl --get-filename \
  -o '/home/youtube-dl/Downloads/%(title)s.mp4' \
  $VID
 
+# notes:
+# add feature to get format types
+# youtube-dl -F url
+# youtube-dl -f numberofformat url

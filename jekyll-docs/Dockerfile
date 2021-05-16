@@ -1,4 +1,4 @@
-FROM jekyll/jekyll:4.1.0
+FROM jekyll/jekyll:4.2.0
 LABEL maintainer="jberenguer <berenguer.jon@gmail.com>"
 
 RUN gem install jekyll-docs -v 4.0.0
